@@ -3,18 +3,18 @@
  * @return {number[]}
  */
 var sortArrayByParity = function(nums) {
-    let even = [];
-    let odd = [];
+
+    let jj = []
+    let tt = []
+
     
-    // 짝수와 홀수를 분리
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] % 2 === 0) {
-            even.push(nums[i]);
-        } else {
-            odd.push(nums[i]);
+    for(i=0; i< nums.length;i++){
+        if(nums[i] % 2 == 0){
+            jj.push(nums[i])
+        }else{
+            tt.push(nums[i])
         }
     }
     
-    // 짝수 배열과 홀수 배열 병합
-    return [...even, ...odd];
+    return [...jj,...tt]
 };
